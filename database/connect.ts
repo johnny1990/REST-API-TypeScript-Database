@@ -1,4 +1,5 @@
-var Connection = require('tedious').Connection;var config = {
+var Connection = require('tedious').Connection;
+var config = {
     server: '#######',
     authentication: {
         type: 'default',
@@ -14,10 +15,12 @@ var Connection = require('tedious').Connection;var config = {
         useColumnNames: false
     }
 }
-var connection = new Connection(config);connection.on('connect', function (err) {
+var connection = new Connection(config);
+connection.on('connect', function (err) {
     if (err) {
         console.log(err);
     } else {
         console.log('Connected to the db!!!!!');
     }
-});module.exports = connection;
+});
+module.exports = connection;
