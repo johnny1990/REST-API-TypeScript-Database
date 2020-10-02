@@ -13,7 +13,7 @@ function CategoryRepository(dbContext)
        if (req.params.categoryID) {
             var parameters = [];
             parameters.push({ name: 'CategoryID', type: TYPES.Int, val: req.params.categoryID });
-            dbContext.getQuery("GetCategory", parameters, false, function (error, data) {
+            dbContext.getQuery("GetCategories", parameters, false, function (error, data) {
                 if (data) {
                     req.data = data[0];
                     return res.json(response(data, error));
