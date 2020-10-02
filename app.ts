@@ -4,6 +4,7 @@ var port = process.env.port || 3300;
 app.listen(port, () => {
     console.log("Hi This port is running");
 });app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());var router = require('./routes')();
+app.use(bodyParser.json());
+var router = require('./api_routes')();
  
 app.use('/api', router);
