@@ -1,0 +1,13 @@
+USE [NORTHWIND]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[GetProducts] 
+ 
+AS
+ SELECT * from Products
+ 
+GO;
